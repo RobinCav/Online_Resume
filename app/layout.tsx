@@ -4,6 +4,7 @@ import "./globals.css"
 import Header from '../components/header'
 import ThemeContextProvider from "@/context/theme-context";
 import ActiveSectionContextProvider from "@/context/active-section-context";
+import ParallaxDivs from '@/components/parallax-divs';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,13 +19,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='!scroll-smooth'>
+    <html lang="en" className='!scroll-smooth bg-zinc-100'>
       
       <body className={`${inter.className}   text-gray-950 relative`}>
-    
-      <div className="bg-[#5ecbec] absolute top-[-6rem] -z-10 right-[9rem] h-screen w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
-        <div className="bg-[#f8bce9] absolute top-[-1rem] -z-10 left-[-35rem] h-screen w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
+
+     
+     
         <ThemeContextProvider>
+        <ParallaxDivs/>
         <ActiveSectionContextProvider>
             <Header />
             {children}

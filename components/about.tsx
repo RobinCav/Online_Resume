@@ -7,22 +7,34 @@ import { useSectionInView } from "@/lib/hooks";
 
 function About() {
 
-    const { ref } = useSectionInView("About");
+    const { ref } = useSectionInView("About", 0.5);
   return (
-    <motion.section className="flex flex-col justify-normal pt-3 h-screen max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+    <motion.section className="text-outline-p  flex flex-col justify-normal pt-3 max-w-[60rem] text-center leading-8 sm:mb-40 scroll-mt-28"
     initial={{opacity: 0, y:100}}
     animate={{opacity: 1, y:0}}
     transition={{delay: 0.2}}
     id="about"
+    viewport={{
+      once: false,
+    }}
     ref={ref}>
         <SectionHeading>About me</SectionHeading>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti repellendus rerum deserunt, neque officia accusamus, veniam distinctio perferendis magnam repellat ex aliquid at recusandae, voluptatibus officiis facilis aliquam ullam doloremque!
-        Veritatis, quisquam, perspiciatis consectetur, placeat iste assumenda aut rerum rem omnis nisi consequatur optio laboriosam hic vero. Incidunt expedita eum dignissimos! Numquam magni laborum aperiam id esse. Sit, facere beatae.
-        Consequatur dolorem inventore illum deleniti tenetur labore maxime facere ea aperiam voluptatem odit saepe iste quidem eveniet amet eius, eum culpa porro debitis ducimus totam optio sed minima adipisci. Error.
+        <p>🚀 Passionate Developer | Aspiring Innovator | Tech Enthusiast 🚀
+          <br/>
+
+Greetings! I'm Robin Cavlek, a recent graduate with an insatiable curiosity for crafting captivating user experiences through web and app development. With hands-on experience in JavaScript, HTML, and CSS, I thrive on breathing life into digital landscapes. My journey has also led me to Java, Android Studio, React.js, React Native, and Node.js, where I've harnessed the power of these technologies to create seamless applications.
         </p>
         <br/>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo suscipit magni adipisci! Cupiditate ipsum tempore, rerum, necessitatibus beatae eius, sit voluptates soluta minus magni nam nemo ipsa. Placeat, nam nisi?
-        Minima ipsa ad adipisci hic atque ea nobis nostrum iste quisquam reprehenderit debitis dicta esse facere, illo facilis amet a, assumenda sapiente harum, illum voluptate deserunt eveniet. Harum, libero eum!</p>
+
+        <p>I'm a dedicated individual with a varied experience that spans from software
+development to launching and running my own mobile app. My education includes a
+Bachelor's degree in Information Technology, with solid expertise in areas such as web
+development, object-oriented programming, algorithms, data structures, operating
+systems, and cybersecurity.
+My passion for technology and continual learning propels me forward. Currently, I
+am particularly focused on artikcial intelligence and am worzing diligently towards an
+AHure certikcation to enhance my cloud computing szills. My aim is to contribute to
+creating innovative and sustainable solutions.</p>
      
         <br/>
     </motion.section>

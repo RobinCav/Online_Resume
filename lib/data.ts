@@ -1,6 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
+import {FcSupport} from "react-icons/fc"
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
@@ -43,30 +44,8 @@ export const experiencesData = [
     icon: React.createElement(LuGraduationCap),
     date: "2017",
   },
-  {
-    title: "Substitute Teacher",
-    location: "Strømmen, Norway",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2018 - Currently",
-  },
-  {
-    title: "Graduated IT",
-    location: "Halden, Norway",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2018 - 2022",
-  },
-  {
-    title: "Founder and CTO of CetchApp",
-    location: "Strømmen, Norway",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - Currently",
-  },
+ 
+ 
   {
     title: "IT-Consultant",
     location: "Sunnaas Hospital, Norway",
@@ -80,8 +59,41 @@ export const experiencesData = [
     location: "Sarpsborg, Norway",
     description:
       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(FcSupport),
     date: "2022 - 2022",
+  },
+   
+  {
+    title: "Graduated IT",
+    location: "Halden, Norway",
+    description:
+      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2018 - 2022",
+  },
+  {
+    title: "Homeroom Teacher",
+    location: "Strømmen, Norway",
+    description:
+      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2022 - 2023",
+  },
+  {
+    title: "Substitute Teacher",
+    location: "Strømmen, Norway",
+    description:
+      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2018 - Currently",
+  },
+  {
+    title: "Founder and CTO of CetchApp",
+    location: "Strømmen, Norway",
+    description:
+      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+    icon: React.createElement(FaReact),
+    date: "2021 - Currently",
   },
 
 ] as const;
@@ -99,13 +111,25 @@ export const skillsData = [
   "Git",
   "Tailwind",
   "Java",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
   "PostgreSQL",
   "Python",
-  "Django",
-  "Framer Motion",
+  "User testing",
+  "Unit testing",
+  "JSON",
+  "Cryptography",
+  "SQL",
+  "Powershell",
+  "DevOps",
+  "ERP",
+  "Postman",
+  "RESTful API",
+  "PHP",
+  "Problem solving",
+  "Prototyping",
+  "Algorithms and data structures",
+  "Project management",
+  "Network security",
+  "Risk management"
+
+  
 ] as const;

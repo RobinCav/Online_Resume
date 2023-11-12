@@ -2,26 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  --line-color: #e5e7eb;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html.dark {
+  --line-color: rgba(255, 255, 255, 0.2);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.borderBlack {
+  @apply border border-slate-500/5;
+}
+
+/* globals.css or other CSS file */
+.custom-date-style {
+  @apply mx-3 h-40 text-xl; /* Tailwind utility classes */
+}
+
+
+.text-outline {
+  text-shadow: 
+      -1px -1px 0 #e6e6e6,  
+       1px -1px 0 #e6e6e6,
+      -2px  2px 0 #e6e6e6,
+       2px  2px 0 #e6e6e6;
+}
+
+.text-outline-p {
+  font-size: medium;
+  line-height:  2.5rem;
+  letter-spacing: 0.1rem;
+  text-shadow: 
+      -0.1px -0.1px 0 #222222,  
+       0.1px -0.1px 0 #222222,
+      -0.1px  0.1px 0 #222222,
+       0.1px  0.1px 0 #222222;
 }

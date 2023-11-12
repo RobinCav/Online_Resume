@@ -15,28 +15,33 @@ import { useTheme } from "@/context/theme-context";
 
 function experience() {
 
-  const { ref } = useSectionInView("Experience");
+  const { ref } = useSectionInView("Experience", 0.2);
   const { theme } = useTheme();
 
   return (
-    <motion.section className="flex flex-col bg-slate-50 justify-normal max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+    <motion.section className="flex flex-col   justify-normal max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28 relative"
+
     initial={{opacity: 0, y:100}}
     animate={{opacity: 1, y:0}}
     transition={{delay: 0.2}}
-    ref={ref}
-    id="experience">
-         <SectionHeading>My experience</SectionHeading>
+   
+    id="experience"
+    ref={ref}>
+         <SectionHeading>My experiences</SectionHeading>
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
+            dateClassName="custom-date-style"
               contentStyle={{
                 background:
-                  theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
+                  theme === "light" ? "white" : "rgba(255, 255, 255, 0.05)",
                 boxShadow: "none",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
                 textAlign: "left",
-                padding: "1.3rem 2rem",
+                borderRadius: 5,
+                padding: "2rem 2rem",
+                
               }}
               contentArrowStyle={{
                 borderRight:
@@ -45,8 +50,10 @@ function experience() {
                     : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
               date={item.date}
+              
               icon={item.icon}
               iconStyle={{
+                
                 background:
                   theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
                 fontSize: "1.5rem",
@@ -61,6 +68,7 @@ function experience() {
           </React.Fragment>
         ))}
       </VerticalTimeline>
+
     </motion.section>
   )
 }

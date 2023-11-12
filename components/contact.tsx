@@ -1,31 +1,57 @@
+"use client";
 
-"use client"
-
+import React from "react";
 import SectionHeading from "./section-heading";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
+import { FaPaperPlane } from "react-icons/fa";
+import { sendEmail } from "@/lib/send-email";
 
-function contact() {
-    const { ref } = useSectionInView("Contact");
+
+
+export default function Contact() {
+  const { ref } = useSectionInView("Contact");
+
+
+
+
   return (
-    <motion.section className="flex flex-col justify-normal max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
-    initial={{opacity: 0, y:100}}
-    animate={{opacity: 1, y:0}}
-    transition={{delay: 0.2}}
-    ref={ref}
-    id="contact">
-        <SectionHeading>Contact</SectionHeading>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti repellendus rerum deserunt, neque officia accusamus, veniam distinctio perferendis magnam repellat ex aliquid at recusandae, voluptatibus officiis facilis aliquam ullam doloremque!
-        Veritatis, quisquam, perspiciatis consectetur, placeat iste assumenda aut rerum rem omnis nisi consequatur optio laboriosam hic vero. Incidunt expedita eum dignissimos! Numquam magni laborum aperiam id esse. Sit, facere beatae.
-        Consequatur dolorem inventore illum deleniti tenetur labore maxime facere ea aperiam voluptatem odit saepe iste quidem eveniet amet eius, eum culpa porro debitis ducimus totam optio sed minima adipisci. Error.
-        </p>
-        <br/>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo suscipit magni adipisci! Cupiditate ipsum tempore, rerum, necessitatibus beatae eius, sit voluptates soluta minus magni nam nemo ipsa. Placeat, nam nisi?
-        Minima ipsa ad adipisci hic atque ea nobis nostrum iste quisquam reprehenderit debitis dicta esse facere, illo facilis amet a, assumenda sapiente harum, illum voluptate deserunt eveniet. Harum, libero eum!</p>
-     
-        <br/>
-    </motion.section>
-  )
-}
+    <motion.section
+      id="contact"
+      ref={ref}
+      className="mb-20 rounded-xl bg-zinc-200 p-16 px-20  sm:mb-28 w-[min(100%,60rem)] text-center"
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.5,
+      }}
+      viewport={{
+        once: false,
+      }}
+    >
+      <SectionHeading>Contact me</SectionHeading>
 
-export default contact
+      <p className="text-gray-700 -mt-2 text-outline-p text-xs dark:text-white/80">
+        Please contact me directly at{" "}
+        <a className="underline font-semibold" href="mailto:example@gmail.com">
+          robin.cavlek.jobb@hotmail.com
+        </a>{" "}
+        or through this form.
+      </p>
+
+      <form className="mt-10  flex flex-col" action={async (formData) => { await sendEmail(formData)}}>
+        <input required maxLength={500} placeholder="Your email" className="bg-zinc-100 h-14 px-4 rounded-lg border border-gray-700" type="email" />
+        <textarea required maxLength={500} placeholder="Your message" className="bg-zinc-100 h-52 my-3 rounded-lg border border-gray-700 p-4" />
+        <button  type="submit" className="focus:scale-110 hover:scale-110 active:scale-105 hover:bg-[#334A52] group flex items-center justify-center gap-3 h-[3rem] w-[8rem] bg-slate-500 text-white rounded-full outline-none transition-all">
+          Submit <FaPaperPlane classname="group-hover:translate-x-1 group-hover:-translate-y-1 text-xs opacity-70 transition-all" />{" "}
+        </button>
+      </form>
+
+     
+    </motion.section>
+  );
+}

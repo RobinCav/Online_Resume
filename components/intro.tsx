@@ -42,11 +42,11 @@ function Intro(){
             initial={{opacity:0, scale: 0}}
             animate={{opacity:1, scale: 1}}
             transition={{type: "tween", duration: 0.2}}>
-              <span className="font-bold md:text-4xl sm:text-xl">Enchanté, Im Robin Cavlek.</span>
+              <span className="text-outline font-bold md:text-4xl sm:text-xl">Enchanté, Im Robin Cavlek.</span>
               <br />
-              <span className=" md:text-2xl sm:lg">Aspiring <span className="font-bold">full-stack developer</span> by day. ☀️</span>
+              <span className="text-outline-p md:text-2xl sm:lg">Aspiring <span className="font-bold">full-stack developer</span> by day. ☀️</span>
               <br />
-              <span className="md:text-2xl sm:lg"><span className="font-bold">Founder</span> and <span className="font-bold" >CTO</span> of  <span className="font-bold">CetchApp</span> at night.🌙</span>
+              <span className="text-outline-p md:text-2xl sm:lg"><span className="font-bold">Founder</span> and <span className="font-bold" >CTO</span> of  <span className="font-bold">CetchApp</span> at night.🌙</span>
             </motion.p>
 
              <motion.div
@@ -59,7 +59,7 @@ function Intro(){
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-6 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition text-sm"
+          className="group bg-slate-600 text-white px-6 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition text-sm hover:bg-[#334A52]"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -71,7 +71,7 @@ function Intro(){
 
         <a
           className="group bg-white px-6 py-2 text-sm flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/sample.pdf"
+          href="/CV.pdf"
           download
         >
           Download CV{" "}
@@ -79,7 +79,7 @@ function Intro(){
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 hover:text-blue-500 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-1  transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="bg-white p-4 text-gray-700 hover:text-[#0077b5] flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-1  transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/robin-cavlek-18298a231/"
           target="_blank"
         >
@@ -87,7 +87,7 @@ function Intro(){
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-purple-600 active:scale-120 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-[#6e5494] active:scale-120 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com/RobinCav"
           target="_blank"
         >
